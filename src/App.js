@@ -34,6 +34,7 @@ export default function App() {
     } else {
       setIsLastSlide(false);
     }
+    setCurrentSlide(nextSlide);
   };
 
   return <div className="app"></div>;
