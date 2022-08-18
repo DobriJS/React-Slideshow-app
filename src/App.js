@@ -14,7 +14,7 @@ export default function App() {
       : setIsLastSlide(false);
     setCurrentSlide(nextSlide);
   };
-
+  
   return (
     <div className="app">
       <div>
