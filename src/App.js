@@ -8,16 +8,10 @@ export default function App() {
   const [isLastSlide, setIsLastSlide] = useState(false);
 
   const updateSlide = (nextSlide) => {
-    if (nextSlide === 0) {
-      setIsFirstSlide(true);
-    } else {
-      setIsFirstSlide(false);
-    }
-    if (nextSlide === slides.length - 1) {
-      setIsLastSlide(true);
-    } else {
-      setIsLastSlide(false);
-    }
+    nextSlide === 0 ? setIsFirstSlide(true) : setIsFirstSlide(false);
+    nextSlide === slides.length - 1
+      ? setIsLastSlide(true)
+      : setIsLastSlide(false);
     setCurrentSlide(nextSlide);
   };
 
