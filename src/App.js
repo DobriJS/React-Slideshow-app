@@ -37,5 +37,34 @@ export default function App() {
     setCurrentSlide(nextSlide);
   };
 
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <div>
+        <button
+          disabled={currentSlide === initialSlides}
+          onClick={() => updateSlide(initialSlides)}
+        >
+          Restart
+        </button>
+        <button
+          disabled={isFirstSlide}
+          onClick={() => updateSlide(currentSlide - 1)}
+        >
+          Prev
+        </button>
+        <button
+          disabled={isLastSlide}
+          onClick={() => updateSlide(currentSlide + 1)}
+        >
+          Next
+        </button>
+        <div>
+          <br />
+          <div>{slides[currentSlide].title}</div>
+          <br />
+          <div>{slides[currentSlide].text}</div>
+        </div>
+      </div>
+    </div>
+  );
 }
